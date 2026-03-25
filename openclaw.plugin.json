@@ -1,0 +1,21 @@
+{
+  "id": "litellm-search-provider",
+  "name": "LiteLLM Search Provider",
+  "description": "Bridge OpenClaw web_search to LiteLLM Search API",
+  "version": "2026.3.24",
+  "extensionPoints": ["webSearchProvider"],
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "webSearch": {
+        "type": "object",
+        "properties": {
+          "apiKey": {
+            "type": "object",
+            "description": "LiteLLM API key (SecretRef or string)"
+          }
+        }
+      }
+    }
+  }
+}

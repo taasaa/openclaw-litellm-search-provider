@@ -1,0 +1,33 @@
+# Source files
+src/
+
+# Test files
+*.test.js
+*.spec.js
+__tests__/
+test/
+coverage/
+
+# Development files
+.github/
+.vscode/
+.idea/
+
+# Documentation (keep README, LICENSE, CHANGELOG)
+CONTRIBUTING.md
+docs/
+
+# Config files
+.gitignore
+.eslintrc*
+.prettierrc*
+vitest.config.js
+
+# Build artifacts
+*.log
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.*
