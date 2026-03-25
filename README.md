@@ -1,6 +1,6 @@
 # OpenClaw LiteLLM Search Provider Plugin
 
-[![npm version](https://badge.fury.io/js/%40openclaw%2Flitellm-search-provider.svg)](https://badge.fury.io/js/%40openclaw%2Flitellm-search-provider)
+[![npm version](https://badge.fury.io/js/openclaw-litellm-search-provider.svg)](https://badge.fury.io/js/openclaw-litellm-search-provider)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A production-ready web search provider plugin for [OpenClaw](https://github.com/openclaw/openclaw) that bridges to [LiteLLM's Search API](https://docs.litellm.ai/docs/search). Supports multiple search backends (Brave, Tavily, etc.) through LiteLLM's unified interface.
@@ -20,14 +20,14 @@ A production-ready web search provider plugin for [OpenClaw](https://github.com/
 ### From npm (Recommended)
 
 ```bash
-openclaw plugins install @openclaw/litellm-search-provider
+openclaw plugins install openclaw-litellm-search-provider
 ```
 
 ### From Source
 
 ```bash
-git clone https://github.com/your-org/litellm-search-provider.git
-cd litellm-search-provider
+git clone https://github.com/taasaa/openclaw-litellm-search-provider.git
+cd openclaw-litellm-search-provider
 npm install
 npm run build
 openclaw plugins install -l $(pwd)
@@ -260,8 +260,8 @@ Uses OpenClaw's `withTrustedWebSearchEndpoint` for secure HTTP requests with tim
 ### Setup
 
 ```bash
-git clone https://github.com/your-org/litellm-search-provider.git
-cd litellm-search-provider
+git clone https://github.com/taasaa/openclaw-litellm-search-provider.git
+cd openclaw-litellm-search-provider
 npm install
 ```
 
@@ -330,7 +330,7 @@ openclaw --version
 
 If using local installation:
 ```bash
-cd litellm-search-provider
+cd openclaw-litellm-search-provider
 mkdir -p node_modules
 ln -sf $(which openclaw | xargs dirname | xargs dirname)/lib/node_modules/openclaw node_modules/openclaw
 ```
@@ -360,7 +360,7 @@ MIT License - see [LICENSE](LICENSE) for details.
 ## Support
 
 - **Documentation**: [https://docs.openclaw.ai/tools/web](https://docs.openclaw.ai/tools/web)
-- **Issues**: [GitHub Issues](https://github.com/your-org/litellm-search-provider/issues)
+- **Issues**: [GitHub Issues](https://github.com/taasaa/openclaw-litellm-search-provider/issues)
 - **OpenClaw Community**: [Discord](https://discord.gg/openclaw)
 
 ## Related Projects
