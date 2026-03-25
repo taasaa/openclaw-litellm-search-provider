@@ -1,5 +1,5 @@
 {
-  "name": "@openclaw/litellm-search-provider",
+  "name": "openclaw-litellm-search-provider",
   "version": "2026.3.24",
   "description": "OpenClaw web search provider plugin for LiteLLM Search API",
   "keywords": [
@@ -11,13 +11,13 @@
     "tavily",
     "brave-search"
   ],
-  "homepage": "https://github.com/your-org/litellm-search-provider#readme",
+  "homepage": "https://github.com/taasaa/openclaw-litellm-search-provider#readme",
   "bugs": {
-    "url": "https://github.com/your-org/litellm-search-provider/issues"
+    "url": "https://github.com/taasaa/openclaw-litellm-search-provider/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-org/litellm-search-provider.git"
+    "url": "git+https://github.com/taasaa/openclaw-litellm-search-provider.git"
   },
   "license": "MIT",
   "author": "OpenClaw Community",
