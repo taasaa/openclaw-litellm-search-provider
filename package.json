@@ -1,6 +1,6 @@
 {
   "name": "openclaw-litellm-search-provider",
-  "version": "2026.3.24",
+  "version": "2026.3.26",
   "description": "OpenClaw web search provider plugin for LiteLLM Search API",
   "keywords": [
     "openclaw",
@@ -21,8 +21,9 @@
   },
   "license": "MIT",
   "author": "OpenClaw Community",
-  "type": "commonjs",
+  "type": "module",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist/",
     "openclaw.plugin.json",
@@ -31,12 +32,12 @@
     "CHANGELOG.md"
   ],
   "scripts": {
-    "build": "esbuild index.js --bundle --platform=node --target=node18 --format=cjs --outfile=dist/index.js --minify --external:openclaw --external:openclaw/plugin-sdk",
+    "build": "tsc",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
-    "lint": "eslint src/**/*.js",
-    "lint:fix": "eslint src/**/*.js --fix",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
     "prepublishOnly": "npm run build"
   },
   "openclaw": {
@@ -44,9 +45,12 @@
       "./dist/index.js"
     ]
   },
+  "dependencies": {
+    "@sinclair/typebox": "^0.34.48"
+  },
   "devDependencies": {
-    "@sinclair/typebox": "^0.34.48",
-    "esbuild": "^0.27.3",
+    "@types/node": "^25.5.0",
+    "typescript": "^5.0.0",
     "vitest": "^1.6.1"
   },
   "engines": {

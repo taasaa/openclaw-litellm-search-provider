@@ -2,20 +2,62 @@
   "id": "litellm-search-provider",
   "name": "LiteLLM Search Provider",
   "description": "Bridge OpenClaw web_search to LiteLLM Search API",
-  "version": "2026.3.24",
-  "extensionPoints": ["webSearchProvider"],
+  "version": "2026.3.26",
   "configSchema": {
     "type": "object",
     "properties": {
-      "webSearch": {
-        "type": "object",
-        "properties": {
-          "apiKey": {
-            "type": "object",
-            "description": "LiteLLM API key (SecretRef or string)"
-          }
-        }
+      "apiKey": {
+        "type": "string",
+        "description": "LiteLLM API key"
+      },
+      "baseUrl": {
+        "type": "string",
+        "description": "LiteLLM base URL (e.g., http://localhost:4000)"
+      },
+      "searchToolName": {
+        "type": "string",
+        "description": "Name of the search tool configured in LiteLLM"
+      },
+      "defaultCountry": {
+        "type": "string",
+        "description": "Default country code for region-specific results"
+      },
+      "passDomainFilter": {
+        "type": "boolean",
+        "description": "Allow domain_filter parameter to be passed to LiteLLM"
+      },
+      "timeoutSeconds": {
+        "type": "number",
+        "description": "Request timeout in seconds",
+        "default": 30
       }
+    }
+  },
+  "uiHints": {
+    "apiKey": {
+      "label": "API Key",
+      "placeholder": "sk-...",
+      "sensitive": true
+    },
+    "baseUrl": {
+      "label": "Base URL",
+      "placeholder": "http://localhost:4000"
+    },
+    "searchToolName": {
+      "label": "Search Tool Name",
+      "placeholder": "search"
+    },
+    "defaultCountry": {
+      "label": "Default Country",
+      "placeholder": "US"
+    },
+    "passDomainFilter": {
+      "label": "Pass Domain Filter",
+      "help": "Allow domain_filter parameter to be passed to LiteLLM"
+    },
+    "timeoutSeconds": {
+      "label": "Timeout (seconds)",
+      "placeholder": "30"
     }
   }
 }
