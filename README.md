@@ -70,28 +70,21 @@ Add to your `~/.openclaw/openclaw.json`:
         "provider": "litellm-search-provider",
         "maxResults": 5,
         "timeoutSeconds": 30,
-        "cacheTtlMinutes": 15,
-        "litellm-search-provider": {
-          "baseUrl": "http://localhost:4000",
-          "searchToolName": "search",
-          "defaultCountry": "US",
-          "passDomainFilter": true
-        }
+        "cacheTtlMinutes": 15
       }
     }
   },
   "plugins": {
+    "allow": ["litellm-search-provider"],
     "entries": {
       "litellm-search-provider": {
         "enabled": true,
         "config": {
-          "webSearch": {
-            "apiKey": {
-              "provider": "default",
-              "source": "env",
-              "id": "LITELLM_API_KEY"
-            }
-          }
+          "apiKey": "${LITELLM_API_KEY}",
+          "baseUrl": "http://localhost:4000",
+          "searchToolName": "search",
+          "defaultCountry": "US",
+          "passDomainFilter": true
         }
       }
     }
