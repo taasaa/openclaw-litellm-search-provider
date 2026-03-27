@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2026.3.26] - 2026-03-26
+
+### Fixed
+- Plugin ID mismatch warning: Changed manifest ID from `litellm-search-provider` to `litellm-search`
+  to align with OpenClaw's idHint derivation logic (package names ending in `-provider` have the
+  suffix automatically stripped when deriving the hint)
+
+### Changed
+- Updated all plugin ID references in configuration and documentation to use `litellm-search`
+- Package name remains `litellm-search-provider` for npm registry consistency
+
 ## [2026.3.24] - 2026-03-24
 
 ### Added

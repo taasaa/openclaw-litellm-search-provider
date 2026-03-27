@@ -1,6 +1,6 @@
 import { Type } from "@sinclair/typebox";
 
-const PROVIDER_ID = "litellm-search-provider";
+const PROVIDER_ID = "litellm-search";
 const LITELLM_MAX_SEARCH_COUNT = 20;
 const ENV_VAR_API_KEY = "LITELLM_API_KEY";
 

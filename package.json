@@ -1,5 +1,6 @@
 {
-  "name": "openclaw-litellm-search-provider",
+  "name": "litellm-search-provider",
+  "id": "litellm-search-provider",
   "version": "2026.3.26",
   "description": "OpenClaw web search provider plugin for LiteLLM Search API",
   "keywords": [

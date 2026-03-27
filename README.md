@@ -67,7 +67,7 @@ Add to your `~/.openclaw/openclaw.json`:
     "web": {
       "search": {
         "enabled": true,
-        "provider": "litellm-search-provider",
+        "provider": "litellm-search",
         "maxResults": 5,
         "timeoutSeconds": 30,
         "cacheTtlMinutes": 15
@@ -75,9 +75,9 @@ Add to your `~/.openclaw/openclaw.json`:
     }
   },
   "plugins": {
-    "allow": ["litellm-search-provider"],
+    "allow": ["litellm-search"],
     "entries": {
-      "litellm-search-provider": {
+      "litellm-search": {
         "enabled": true,
         "config": {
           "apiKey": "${LITELLM_API_KEY}",
@@ -107,12 +107,12 @@ openclaw agent --agent main --message "Search for the latest news about AI agent
 | Field | Type | Default | Description |
 |-------|------|---------|-------------|
 | `enabled` | boolean | `false` | Enable/disable web search |
-| `provider` | string | - | Must be `"litellm-search-provider"` |
+| `provider` | string | - | Must be `"litellm-search"` |
 | `maxResults` | number | 5 | Maximum results per search (1-20) |
 | `timeoutSeconds` | number | 30 | Search timeout in seconds |
 | `cacheTtlMinutes` | number | 15 | Cache time-to-live in minutes |
 
-#### Provider-Specific Settings (`tools.web.search.litellm-search-provider`)
+#### Provider-Specific Settings (`tools.web.search.litellm-search`)
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
@@ -137,7 +137,7 @@ export LITELLM_API_KEY="sk-..."
 {
   "plugins": {
     "entries": {
-      "litellm-search-provider": {
+      "litellm-search": {
         "config": {
           "webSearch": {
             "apiKey": {
@@ -158,7 +158,7 @@ export LITELLM_API_KEY="sk-..."
 {
   "plugins": {
     "entries": {
-      "litellm-search-provider": {
+      "litellm-search": {
         "config": {
           "webSearch": {
             "apiKey": "sk-..."

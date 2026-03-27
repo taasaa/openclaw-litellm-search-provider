@@ -30,7 +30,7 @@ import {
   writeCachedSearchPayload,
 } from "openclaw/plugin-sdk/provider-web-search";
 
-const PROVIDER_ID = "litellm-search-provider";
+const PROVIDER_ID = "litellm-search";
 const LITELLM_MAX_SEARCH_COUNT = 20;
 const DOCS_URL = "https://docs.openclaw.ai/tools/web";
 const ENV_VAR_API_KEY = "LITELLM_API_KEY";
